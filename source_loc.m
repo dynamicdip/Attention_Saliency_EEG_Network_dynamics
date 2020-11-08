@@ -202,7 +202,7 @@ SortedTemp = Temp(order,:);
 LB = SortedTemp(1:size(SortedTemp,1)/2,:); RB = SortedTemp((size(SortedTemp,1)/2)+1:end,:);
 
 % Getting the quantile value for thresholding
-qp = 0.98; 
+qp = 0.95; 
 
 LB_pow = LB(:,1); LB_pos = LB(:,2:4); LB_threshold = quantile(LB_pow, qp);
 RB_pow = RB(:,1); RB_pos = RB(:,2:4); RB_threshold = quantile(RB_pow, qp);
@@ -260,7 +260,7 @@ SortedTemp = Temp(order,:);
 LB = SortedTemp(1:size(SortedTemp,1)/2,:); RB = SortedTemp((size(SortedTemp,1)/2)+1:end,:);
 
 % Getting the quantile value for thresholding
-qp = 0.98; 
+qp = 0.95; 
 
 LB_pow = LB(:,1); LB_pos = LB(:,2:4); LB_threshold = quantile(LB_pow, qp);
 RB_pow = RB(:,1); RB_pos = RB(:,2:4); RB_threshold = quantile(RB_pow, qp);
