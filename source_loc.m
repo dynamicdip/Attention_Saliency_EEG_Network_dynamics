@@ -1,6 +1,6 @@
 %% About: This code plots figures presented in Fig 4 of Ghosh, Roy, Banerjee 2020
 
-% Download folders static_stim and dynamic_stim to local system, unzip them and extract the constituent folders to a common parent directory/folder
+% Download folders static_stim and dynamic_stim to local system, unzip them and extract the constituent folders (named static_stim/dynamic_stim) to a common parent directory/folder
 
 % The folders static_stim/dynamic_stim contain subject-wise sensor level EEG data in Fieldtrip format including their respective MR images and forward models generated using ForwardModel.m
 
