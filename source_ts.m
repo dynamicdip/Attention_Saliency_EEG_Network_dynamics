@@ -8,6 +8,8 @@
 % Add script Filter_arp.m to path
 % Output : 3D matrix in the form of timeXtrialXnodes 
 
+% Replace '~' at all places in the code with the path to the directory containing parent folder of static_stim/dynamic_stim  
+
 % Written by Priyanka Ghosh on 14.10.2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -21,7 +23,9 @@ load('/~/common_fwdmodel.mat', 'headmodel');
 load('/~/common_fwdmodel.mat', 'elec_new');
 HM=headmodel; clear headmodel; Elec_new=elec_new; clear elec_new;
 
-for len = 3; %reconstructs time-series for the 1st participant
+% THIS CODE IS COMPUTATIONALLY INTENSIVE AND MATLAB MIGHT RUN OUT OF SPACE. IT IS ADVISED TO RUN IT INDIVIDUALLY ON EACH SUBJECT.
+
+for len = 3; %reconstructs time-series for the 1st participant, repeat till len = 21 for all 19 subjects
         data_name = dir_name(len);
         load(data_name.name)    
 	cfg        = []; 
@@ -109,5 +113,5 @@ node4=Filter_arp(node4,hi,low,Fs);
 node5=Filter_arp(node5,hi,low,Fs); 
 
 X=node1; X(2,:)=node2; X(3,:)=node3; X(4,:)=node4; X(5,:)=node5; 
-% Repeat all steps for all 19 subjects which will be treated as 19 trials
-% Arrange them into a 3D martix in the form timeXtrialXchannel (channels here will be the nodes)
+% Consider this as channelXtime matrix for first trial. Save X and repeat all steps for all 19 subjects to get all 19 trials
+% Rearrange the matrix using PERMUTE into a 3D martix in the form timeXtrialXchannel (channels here will be the nodes)
