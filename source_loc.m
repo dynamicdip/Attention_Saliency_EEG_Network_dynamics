@@ -1,5 +1,7 @@
 %% About: This code plots figures presented in Fig 4 of Ghosh, Roy, Banerjee 2020
 
+% Remove Chronux and EEGLAB toolbox and add Fieldtrip toolbox to matlab path.
+
 % The folders static_stim/dynamic_stim should contain sensor level EEG data in Fieldtrip format for all 19 subjects. This includes subjects' respective MR images and forward models generated using ForwardModel.m
 
 % Create folders named 'stat_sources' and 'dyn_sources' which will keep saving subject-wise source localaized data from static_stim and dynamic_stim respectively, with every iteration of the loop
