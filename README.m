@@ -50,7 +50,9 @@
 
 % Download mat file named common_fwdmodel.mat from https://drive.google.com/drive/u/2/folders/1vpib8ZnWkQU-YBWhfacwk3ATKFK8n_cM
 %
-% Fieldtrip toolbox(we used fieldtrip-20181105) should be present in the matlab path
+% Download script Filter_arp and put it in matlab path
+%
+% Fieldtrip toolbox(we used fieldtrip-20181105) should be present in matlab path
 %
 % Run matlab script source_ts.m to reconstruct source-level time-series from the sensor-level time-series data and the spatial filter of the thresholded sources
 %
