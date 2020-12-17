@@ -2,10 +2,10 @@
 %% Algorithm for reconstructing source time series from a given set of THRESHOLDED SOURCES and sensor level EEG time-series data
 
 % Requirements 
-% Headmodel (used in the forward model computation i.e. output of ft_prepareheadmodel) 
-% Average of 3-D sensor locations across all subjects (elec_new) 
+% Headmodel (used in the forward model computation i.e. output of ft_prepareheadmodel) present in commonfwdmodel.mat
+% Average of 3-D sensor locations across all subjects (elec_new) present in commonfwdmodel.mat
 % The source positions after thresholding i.e. outputs (static_TH and dynamic_TH) of source_loc.m
-
+% Add script Filter_arp.m to path
 % Output : 3D matrix in the form of timeXtrialXnodes 
 
 % Written by Priyanka Ghosh on 14.10.2020
@@ -101,7 +101,6 @@ clearvars -except node1 node2 node3 node4 node5 Source_TH IDX C X* Beamformer
 
 %% To remove non-stationarities from time-series
 % Removing evoked-potentials using a 5Hz high-pass filter to make the signals stationary 
-% Add script Filter_arp.m to path
 Fs=1000; hi=45; low=5;
 node1=Filter_arp(node1,hi,low,Fs); 
 node2=Filter_arp(node2,hi,low,Fs); 
