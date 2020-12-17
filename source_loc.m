@@ -1,12 +1,10 @@
 %% About: This code plots figures presented in Fig 4 of Ghosh, Roy, Banerjee 2020
 
-% Download folders static_stim and dynamic_stim to local system, unzip them and extract the constituent folders (named static_stim/dynamic_stim) to a common parent directory/folder
+% The folders static_stim/dynamic_stim should contain sensor level EEG data in Fieldtrip format for all 19 subjects. This includes subjects' respective MR images and forward models generated using ForwardModel.m
 
-% The folders static_stim/dynamic_stim contain subject-wise sensor level EEG data in Fieldtrip format including their respective MR images and forward models generated using ForwardModel.m
+% Create folders named 'stat_sources' and 'dyn_sources' which will keep saving subject-wise source localaized data from static_stim and dynamic_stim respectively, with every iteration of the loop
 
-% Create folders named 'stat_sources' and 'dyn_sources' in the same directory which will keep saving subject-wise source localaized data from static_stim and dynamic_stim respectively, with every iteration of the loop
-
-% Make sure the folders static_stim, dynamic_stim, stat_sources and dyn_sources and in the same parent directory/folder
+% Make sure the folders static_stim, dynamic_stim, stat_sources and dyn_sources are in the same parent folder/directory
 
 % Replace '~' at all places in the code with the path to the directory containing this parent folder  
 
