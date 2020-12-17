@@ -1,10 +1,16 @@
 %% This script outlines the analysis to generate the figures of manuscript Ghosh, Roy , Banerjee 2020
 
-% All data used for figures are present in https://drive.google.com/drive/u/2/folders/1vpib8ZnWkQU-YBWhfacwk3ATKFK8n_cM
+% All data and toolboxes used for figures are present in https://drive.google.com/drive/u/2/folders/1vpib8ZnWkQU-YBWhfacwk3ATKFK8n_cM
+%
 % All pre-processed EEG time-series and corresponding reaction times are in file timeser&rt.mat 
+%
 % Fieldtrip format data for Dynamic stimulus is in dynamic_stim folder and for Static stimulus in static_stim folder
-% Other associated folders that need to be added to path are the fieldtrip, chronux toolboxes 
-% 
+%
+% We recommend to download individual subject .mat files and save it in the respective folders named dynamic_stim/static_stim instead of directly downloading the entire folder from the drive
+% (This is to avoid issues of incomplete downloads noticed by us; Google drive downloads are restricted to 2GB and the datasets get rearranged in the process of zipping the folder for download)
+%
+% Other associated folders that need to be added to matlab path are the Fieldtrip, Chronux and EEGLAB toolbox 
+
 
 % Written by Priyanka Ghosh and Arpan Banerjee on 14.10.2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,7 +44,7 @@
 
 % Download and add to matlab path : Fieldtrip toolbox(we used fieldtrip-20181105), @gifti folder and 'coords2surf2.m' from https://drive.google.com/drive/u/2/folders/1vpib8ZnWkQU-YBWhfacwk3ATKFK8n_cM 
 %
-% Download folders static_stim/dynamic_stim from https://drive.google.com/drive/u/2/folders/1vpib8ZnWkQU-YBWhfacwk3ATKFK8n_cM .Each folder contains subject-wise data in fieltrip format
+% Download folders static_stim/dynamic_stim and each folder should contain subject-wise data of all 19 subjects
 %
 % Run matlab script source_loc.m to localize subject-wise sources of alpha power enhancement and to compute statistics over the grand-average across all subjects for static and dynamic stimulus
 %
