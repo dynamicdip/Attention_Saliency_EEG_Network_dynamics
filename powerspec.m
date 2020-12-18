@@ -59,7 +59,7 @@ freq=exp(freq);
 
 %% ------------------------Code to generate 1/f trend removed powerspectrum plots-----------------------------------------------------------------------------
 
-figure; plot(freq(5:16), mean(mean(Etd(5:16,:,:),3),2), 'LineWidth',1.5); hold on; plot(freq(5:16), mean(mean(Ebu(5:16,:,:),3),2), 'LineWidth',1.5); hold on; plot(freq(5:16), mean(mean(En(5:16,:,:),3),2), 'c', 'LineWidth',1.5);
+figure; plot(freq(5:16), mean(mean(Etd(5:16,:,:),3),2), 'LineWidth',1.5); hold on; plot(freq(5:16), mean(mean(Ebu(5:16,:,:),3),2), 'LineWidth',1.5); hold on; plot(freq(5:16), mean(mean(En(5:16,:,:),3),2), 'c', 'LineWidth',1.5); xlim ([5 16]);
 title 'power-spectra for task'; ylabel 'Power(μV)'; xlabel 'Frequency(Hz)';
 
 %% ------------------------Code to generate topoplots ---------------------------------------------------------------------------------------------------------
