@@ -12,7 +12,7 @@
 % Other associated folders that need to be added to matlab path are the Fieldtrip, Chronux and EEGLAB toolbox 
 
 
-% Written by Priyanka Ghosh and Arpan Banerjee on 14.10.2020
+% Written by Priyanka Ghosh, Dipanjan Roy and Arpan Banerjee on 14.10.2020
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% -------------------------------Fig.2----------------------------------------------
